@@ -39,7 +39,6 @@ header{
     width: 70%;
     display: flex;
     justify-content: start;
-    margin-left:10rem ;
    
 }
 .login-btn{
@@ -131,13 +130,12 @@ margin-right: 10px;
 .category-text{
     font-weight: 800;
 }
+
 .category-container{
     background-color: white;
     display: flex;
-    flex-direction: row;
-    padding: 0.6rem 12rem;
-    width: 85vw;
-    justify-content: center;
+    width: 85%;
+    /* justify-content: center; */
     /* overflow: none; */
 }
 .category-images{
@@ -145,7 +143,7 @@ margin-right: 10px;
     flex-direction: row;
     /* align-items: center; */
     text-align: center;
-    /* justify-content: center; */
+    justify-content: space-evenly;
     width: 100%;
 }
 .category-images:hover{
@@ -229,7 +227,7 @@ margin-right: 10px;
     display: flex;
     justify-content: start;
     text-align: center;
-}fluid
+}
 .carousle-overflow{
     overflow: auto;
 }
@@ -254,14 +252,19 @@ margin-right: 10px;
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-
+.dn{
+    display: block;
+}
 @media  screen and (max-width:837px) {
     #search{
         display: none;
     }
 }
-@media  screen and (max-width:1193px) {
+@media  screen and (max-width:1200px) {
     #ad{
+        display: none;
+    }
+    .dn{
         display: none;
     }
     #boe{
@@ -269,11 +272,17 @@ margin-right: 10px;
         grid-column: 12;
     }
 }
-@media screen and (max-width:1321px) {
-    .category-container{
-        width: 100%;
-        justify-content: normal;
+
+@media screen and (max-width :621px) {
+    .login-cart{
+        display: none;
+    }
+}
+@media screen and (max-width :1428px) {
+    .category-top{
         overflow-x: scroll;
+        /* height: max-content; */
+        overflow-y: hidden;
     }
 }
 
