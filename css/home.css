@@ -70,6 +70,18 @@ header{
 .dropdown>.dropdown-toggle:active{
     pointer-events: none;
 }
+
+.dropstart .dropdown-menu {
+    left: -200px; 
+    pointer-events: none;   
+
+}
+
+.dropstart:hover .dropdown-menu {
+display: block;
+}
+  
+
 .login-drop{
     width: 250px;
 }
@@ -107,13 +119,30 @@ header{
     width: 85vw;
     justify-content: center;
 }
-.card{
+.category-images{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.category-images:hover{
+    cursor: pointer;
+}
+.card-c{
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: 1rem;
-    border: 0;
+    /* border: 0; */
+}
+.card-texts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .cat-img{
     width: 4rem;
@@ -161,8 +190,13 @@ header{
     justify-content: start;
     text-align: center;
 }
+.carousle-overflow{
+    overflow: auto;
+}
 .footer{
     width: 100%;
     display: flex;
     flex-direction: row;
 }
+
+
