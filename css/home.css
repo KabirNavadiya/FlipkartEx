@@ -1,24 +1,17 @@
 body{
     background-color: rgba(230, 220, 220, 0.37);
     height: 100vh;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header{
     background-color: white;
     width: 100%;
 }
 
-/* .body-c{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
- main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
 
+/* navigation */
 #search-bar{
     border: 0;
     outline: 0 none;
@@ -46,7 +39,6 @@ header{
     width: 70%;
     display: flex;
     justify-content: start;
-    margin-left:10rem ;
    
 }
 .login-btn{
@@ -76,6 +68,18 @@ header{
 .dropdown>.dropdown-toggle:active{
     pointer-events: none;
 }
+
+.dropstart .dropdown-menu {
+    left: -200px; 
+    pointer-events: none;   
+
+}
+
+.dropstart:hover .dropdown-menu {
+display: block;
+}
+  
+
 .login-drop{
     width: 250px;
 }
@@ -89,6 +93,7 @@ header{
 .sign-up{
     font-size: 17px;
     text-decoration: none;
+    margin-left: 30px;
 }
 
 .cart-btn{
@@ -104,29 +109,74 @@ header{
     margin-right: 10px;
 }
 
+
+.flipkart-logo{
+    width: 160px;
+    aspect-ratio: auto 160/40;
+    height: 40px;
+}
+.dropdown-menu{
+    padding: 20px;
+}
+a{
+    padding: 10px;
+}
+.nav-i{
+margin-right: 10px;
+
+}
+
+/* category-cards  */
+.category-text{
+    font-weight: 800;
+}
+
 .category-container{
     background-color: white;
-    /* height: 125px;
-    margin-left: 200px;
-    margin-right: 200px; */
+    display: flex;
+    width: 85%;
+    /* justify-content: center; */
+    /* overflow: none; */
+}
+.category-images{
     display: flex;
     flex-direction: row;
-    padding: 0.6rem 12rem;
-    width: 85vw;
-    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
-.card{
+.category-images:hover{
+    cursor: pointer;
+}
+.card-img:hover{
+    transform: scale(1.1,1.1);
+}
+.card-c{
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: 1rem;
-    border: 0;
+}
+.card-texts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .cat-img{
-    width: 4rem;
+    width: 5rem;
     height: 5rem;
+    min-height: 5rem;
+    width: 5rem;
 }
+
+
+
+
+/* slide carousel */
 .carousel-container{
     background-color: white;
     display: flex;
@@ -137,41 +187,102 @@ header{
 .advertisement{
     width: 100vw;
 }
-.best-of-electronics{
-    /* background-color: white; */
-    display: grid;
-    grid-template-columns: 80% 20%;
+
+
+/* cards-carousel */
+.cards{
+    width: 18rem;
+    margin-top: 5px;
+}
+.offer{
+    max-width: 100%;
+    margin-top: -20px;
+}
+.carousel-btns{
+    border-radius: 100%; 
+    height: 50px;
+    width: 50px;
+    margin: auto
+}
+.initial-items-list{
+    gap: 10px;
+}
+
+.card-text{
+    text-align:center
+}
+.cards-wrapper{
+    display: flex;
+}
+ 
+.cards{
+    border: 1px solid rgba(109, 106, 106, 0.116);
+    margin: 0.5rem;
+}
+.boe{
     width: 85vw;
 }
-.ele-container{
-    background-color: white;
+.boe-heading{
+    width: 85vw;
     display: flex;
-    flex-direction: row;
     justify-content: start;
-    /* width: 30vw; */
-    width: 100%;
+    text-align: center;
 }
-.card-carousel{
-    width: 100%;
+.carousle-overflow{
+    overflow: auto;
 }
-.ad{
-    background-color: white;
+
+
+/* footer-css */
+.footer{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    margin-left: 15px;
-    
 }
-.offer-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 400px;
+.footer-social{
+    width: 300px;
+    display: flex; 
+    justify-content: space-between;
 }
-.ele-img{
-    width: 10rem;
-    height: 10rem;
-    margin: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.062);
+.footer-i{
+    color: white; 
+    margin: 5px;
 }
+.copy-right{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dn{
+    display: block;
+}
+@media  screen and (max-width:837px) {
+    #search{
+        display: none;
+    }
+}
+@media  screen and (max-width:1200px) {
+    #ad{
+        display: none;
+    }
+    .dn{
+        display: none;
+    }
+    #boe{
+        width: 100%;
+        grid-column: 12;
+    }
+}
+
+@media screen and (max-width :621px) {
+    .login-cart{
+        display: none;
+    }
+}
+@media screen and (max-width :1428px) {
+    .category-top{
+        overflow-x: scroll;
+        /* height: max-content; */
+        overflow-y: hidden;
+    }
+}
+
