@@ -11,7 +11,7 @@ header{
 }
 
 
-
+/* navigation */
 #search-bar{
     border: 0;
     outline: 0 none;
@@ -110,6 +110,27 @@ display: block;
     margin-right: 10px;
 }
 
+
+.flipkart-logo{
+    width: 160px;
+    aspect-ratio: auto 160/40;
+    height: 40px;
+}
+.dropdown-menu{
+    padding: 20px;
+}
+a{
+    padding: 10px;
+}
+.nav-i{
+margin-right: 10px;
+
+}
+
+/* category-cards  */
+.category-text{
+    font-weight: 800;
+}
 .category-container{
     background-color: white;
     display: flex;
@@ -117,18 +138,21 @@ display: block;
     padding: 0.6rem 12rem;
     width: 85vw;
     justify-content: center;
+    /* overflow: none; */
 }
 .category-images{
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
-    
-
 }
 .category-images:hover{
     cursor: pointer;
+}
+.card-img:hover{
+    transform: scale(1.1,1.1);
 }
 .card-c{
     height: 100px;
@@ -147,7 +171,14 @@ display: block;
 .cat-img{
     width: 5rem;
     height: 5rem;
+    min-height: 5rem;
+    width: 5rem;
 }
+
+
+
+
+/* slide carousel */
 .carousel-container{
     background-color: white;
     display: flex;
@@ -159,11 +190,23 @@ display: block;
     width: 100vw;
 }
 
+
+/* cards-carousel */
+.cards{
+    width: 18rem;
+    margin-top: 5px;
+}
+.offer{
+    max-width: 100%;
+    margin-top: -20px;
+}
+.carousel-btns{
+    border-radius: 100%; 
+    height: 50px;
+    width: 50px;
+    margin: auto
+}
 .initial-items-list{
-    /* width: 85vw; */
-    /* width: 100%; */
-    /* display: grid;
-    grid-template-columns: 83% 17%; */
     gap: 10px;
 }
 
@@ -179,9 +222,6 @@ display: block;
     margin: 0.5rem;
 }
 .boe{
-    /* background-color: white; */
-    /* display: flex;
-    flex-direction: row; */
     width: 85vw;
 }
 .boe-heading{
@@ -189,14 +229,29 @@ display: block;
     display: flex;
     justify-content: start;
     text-align: center;
-}
+}fluid
 .carousle-overflow{
     overflow: auto;
 }
+
+
+/* footer-css */
 .footer{
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+.footer-social{
+    width: 300px;
+    display: flex; 
+    justify-content: space-between;
+}
+.footer-i{
+    color: white; 
+    margin: 5px;
+}
+.copy-right{
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 
@@ -205,3 +260,20 @@ display: block;
         display: none;
     }
 }
+@media  screen and (max-width:1193px) {
+    #ad{
+        display: none;
+    }
+    #boe{
+        width: 100%;
+        grid-column: 12;
+    }
+}
+@media screen and (max-width:1321px) {
+    .category-container{
+        width: 100%;
+        justify-content: normal;
+        overflow-x: scroll;
+    }
+}
+
