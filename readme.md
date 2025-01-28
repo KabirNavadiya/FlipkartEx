@@ -1,4 +1,4 @@
-# Flipkart Home Page Replica
+# Flipkart Home Page
 
 This project is a simple replica of the Flipkart home page created using **HTML**, **CSS**, and **Bootstrap**. It was developed as a practice project to enhance front-end development skills and learn responsive design.
 
