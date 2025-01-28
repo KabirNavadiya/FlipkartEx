@@ -229,7 +229,7 @@ margin-right: 10px;
     text-align: center;
 }
 .carousle-overflow{
-    overflow: auto;
+    overflow-x:hidden;
 }
 
 
